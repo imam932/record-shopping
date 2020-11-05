@@ -19,7 +19,7 @@
                 <div class="nav-wrapper">
                     <div class="row">
                         <div class="col s12 m10 offset-m1">
-                        <a href="<?php echo base_url() ?>home"><h1 class="header">My Shop</h1></a>
+                        <a href="<?php echo base_url() ?>home"><h1 class="header">Pelangi Shop</h1></a>
                         </div>
                     </div>
                 </div>
