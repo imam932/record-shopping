@@ -6,9 +6,15 @@ class Model_shop extends CI_Model
 
   var $table = "shop";
 
-  public function select_all()
+  public function select_all($limit=null)
   {
-    $query = $this->db->get($this->table);
+    $this->db->select('shop.id as id, shop.name as product_name, type.name as type_name, type.short_name, st.quantity, st.price, st.created_at');
+    $this->db->from($this->table); 
+    $this->db->limit($limit);
+    $this->db->order_by('st.created_at', 'desc');
+    $this->db->join('type', 'type.id=shop.type_id', 'left');
+    $this->db->join('shop_transaction st', 'st.shop_id=shop.id', 'left');
+    $query = $this->db->get();
 
     if($query->num_rows() > 0)
     {
@@ -22,8 +28,12 @@ class Model_shop extends CI_Model
 
   public function select_by_id($id)
   {
-    $this->db->where('id', $id);
-    $query = $this->db->get($this->table);
+    $this->db->select('shop.id as id, shop.name as product_name, type.name as type_name, type.short_name, st.quantity, st.price, st.created_at');
+    $this->db->from($this->table);
+    $this->db->join('type', 'type.id=shop.type_id', 'left');
+    $this->db->join('shop_transaction st', 'st.shop_id=shop.id', 'left');
+    $this->db->where('shop.id', $id);
+    $query = $this->db->get();
 
     if($query->num_rows() == 1)
     {
@@ -33,21 +43,6 @@ class Model_shop extends CI_Model
     {
       return false;
     }
-  }
-
-  // public function insert()
-  // {
-  //   $data['name']    = $this->input->post('name');
-  //   $data['type_id'] = $this->input->post('type_id');
-  //   $data['created_at'] = date("Y-m-d h:i:s");
-
-  //   $this->db->insert($this->table, $data);
-  // }
-
-  public function update($data, $id)
-  {
-    $this->db->where('id', $id);
-    $this->db->update($this->table, $data);
   }
 
   public function delete($id)

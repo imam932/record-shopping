@@ -39,7 +39,6 @@ class Model_shop_transaction extends CI_Model
   {
     $data['quantity']  = $this->input->post('quantity');
     $data['shop_id'] = $this->input->post('shop_id');
-    $data['month'] = date("m");
     $data['created_at'] = date("Y-m-d h:i:s");
 
     $this->db->insert($this->table, $data);

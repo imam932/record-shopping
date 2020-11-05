@@ -19,7 +19,7 @@
                 <div class="nav-wrapper">
                     <div class="row">
                         <div class="col s12 m10 offset-m1">
-                            <h1 class="header">My Shop</h1>
+                        <a href="<?php echo base_url() ?>home"><h1 class="header">My Shop</h1></a>
                         </div>
                     </div>
                 </div>
@@ -28,11 +28,13 @@
         <div class="container">
             <div class="row">
             <ul id="slide-out" class="sidenav">
-            <li><a href="#!"><i class="material-icons">cloud</i>Record My Shop</a></li>
+            <li><a href="<?php echo base_url() ?>home"><i class="material-icons">cloud</i>Record My Shop</a></li>
             <li><div class="divider"></div></li>
             <li><a class="subheader">Shopping</a></li>
             <li><a class="waves-effect" href="<?php echo base_url() ?>shop">Insert Shop</a></li>
-            <li><a class="waves-effect" href="#!">Report</a></li>
+            <li><a class="subheader">Reports</a></li>
+            <li><a class="waves-effect" href="<?php echo base_url() ?>daily">Daily</a></li>
+            <li><a class="waves-effect" href="<?php echo base_url() ?>monthly">Monthly</a></li>
             </ul>
             <a href="#" data-target="slide-out" class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons">menu</i></a>
             </div>

@@ -22,11 +22,6 @@
   <link href="<?= base_url() ?>assets/admin/css/style.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/admin/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url() ?>assets/admin/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="<?= base_url( )?>assets/admin/css/bootstrap-switch.min.css">
-  <link rel="stylesheet" href="<?= base_url( )?>assets/admin/css/loadimg.min.css">
-  <link rel="stylesheet" href="<?= base_url( )?>assets/admin/css/jquery.paginate.css">
-  <link rel="stylesheet" href="<?= base_url( )?>assets/admin/css/chartist.min.css">
-  <link rel="stylesheet" href="<?= base_url( )?>assets/admin/css/chartist-plugin-tooltip.css">
 </head>
 
 <body>
@@ -74,6 +69,9 @@
             </li>
             <li>
               <a href="<?= base_url().'admin/Users' ?>"><i class="fa fa-fw fa-users"></i> Users </a>
+            </li>
+            <li>
+              <a href="<?= base_url().'admin/Type' ?>"><i class="fa fa-fw fa-book"></i> Type </a>
             </li>
             <?php } ?>
           </ul>
@@ -140,14 +138,6 @@
     <script src="<?= base_url() ?>assets/admin/js/bootstrap-datetimepicker.min.js"></script>
     <script src="<?= base_url() ?>assets/admin/js/dataTables.min.js"></script>
     <script src="<?= base_url() ?>assets/admin/js/dataTables.bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/bootstrap-switch.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/bootstrap-filestyle.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/list.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/list.pagination.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/chartist.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/chartist-plugin-pointlabels.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/js/chartist-plugin-tooltip.min.js"></script>
-    <script src="<?= base_url() ?>assets/admin/ckeditor/ckeditor.js"></script>
   </body>
 
   </html>

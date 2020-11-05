@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/admin/css/dataTables.bootstrap.min.css">
 <div class="container">
     <div class="row">
-    <h4 class="center-align">Monthly Report</h4>
         <table class="striped" id="datatable">
             <thead>
                 <tr>
@@ -12,12 +11,11 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
+            <?php 
             $total_price = 0;
             $no = 1;
-            foreach ($shops as $value) :
+            foreach ($reports as $value) :
                 $date_now = date('m');
-
                 $create_at = new DateTime($value->created_at);
                 if ($create_at->format('m') === $date_now) {
             ?>
@@ -27,7 +25,7 @@
                     <td><?php echo $value->quantity; ?> <?php echo $value->short_name; ?></td>
                     <td>Rp. <?php echo $value->price; ?></td>
                 </tr>
-            <?php 
+            <?php
                 $sum = $value->price * $value->quantity;
                 $total_price += $sum;
             }
@@ -36,7 +34,7 @@
         </table>
     </div>
     <div class="row">
-        <h4 class="right-align">Total : Rp. <?php echo number_format($total_price, 0, '', '.'); ?></h4>
+        <h4 class="right-align">Rp. <?php echo number_format($total_price, 0, '', '.'); ?></h4>
     </div>
 </div>
 <script src="<?= base_url() ?>assets/admin/js/dataTables.min.js"></script>
