@@ -27,7 +27,7 @@ class Shop extends CI_Controller {
 		$shop_id = $this->db->insert_id();
 
 		$data_trans = array(
-			'quantity'  => $this->input->post('quantity'),
+			'quantity'  => 1,
 			'price'  => $this->input->post('price'),
 			'shop_id' => $shop_id,
 			'created_at' => date("Y-m-d h:i:s"),

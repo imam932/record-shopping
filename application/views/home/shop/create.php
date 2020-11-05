@@ -3,7 +3,7 @@
     <form class="col s12" action="<?php echo base_url() ?>shop/store" method="POST">
       <div class="row">
         <div class="input-field col s12">
-          <input type="text" placeholder="" name="name" value="" class="validate">
+          <input type="text" placeholder="" name="name" value="" class="validate" autofocus>
           <label for="first_name">Nama Barang</label>
         </div>
       </div>
